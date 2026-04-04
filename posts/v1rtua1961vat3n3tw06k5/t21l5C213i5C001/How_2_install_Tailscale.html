@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Install Tailscale | The DamVan Blog</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --blog-bg: #0d0d0f; --blog-surface: #161619; --blog-border: #2a2a2e; --blog-accent: #3b82f6; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--blog-bg); color: #e0e0e0; font-family: 'DM Sans', sans-serif; }
+        .hero-small { background: linear-gradient(135deg, #1a1a1a, #2c3e50); padding: 48px 0; border-bottom: 1px solid var(--blog-border); }
+        .content-area { font-size: 1.1rem; line-height: 1.85; }
+        .content-area h1, .content-area h2 { margin-top: 2rem; color: #fff; font-weight: 700; }
+        .content-area h3, .content-area h4 { margin-top: 1.5rem; color: #ccc; }
+        .content-area p { margin-bottom: 1rem; }
+        .content-area img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--blog-border); margin: 1rem 0; }
+        .content-area a { color: var(--blog-accent); }
+        .content-area a:focus-visible { outline: 2px solid var(--blog-accent); outline-offset: 2px; }
+        .content-area code { color: #e879f9; background: rgba(0,0,0,0.3); padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.9em; }
+        .content-area pre { background: var(--blog-surface); padding: 1.25rem; border: 1px solid var(--blog-border); border-radius: 8px; overflow-x: auto; }
+        .content-area pre code { background: none; padding: 0; color: #e0e0e0; }
+        .breadcrumb-item a { text-decoration: none; color: var(--blog-accent); }
+        .breadcrumb-item a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/index.html"><i class="fas fa-comments me-2"></i><span class="text-primary">blog.</span>damvan<span class="text-primary">.ca</span></a>
+            <div class="ms-auto">
+                <a href="/index.html" class="btn btn-outline-secondary btn-sm">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-small" style="
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/tailscale.png'); 
+    background-size: cover; 
+    background-position: center;
+    position: relative; /* Ensures the background stays contained */
+    ">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">How to Install Tailscale</li>
+                </ol>
+            </nav>
+            <h1 class="display-5 fw-bold text-white">How to Install Tailscale</h1>
+            <div class="text-muted"><i class="far fa-calendar me-2"></i>2026-01-20 &nbsp;|&nbsp; <i class="far fa-user me-2"></i>Dalton Goodwin-Peck </br><i class="far fa-pen-to-square me-2"></i>Leland Jensen &nbsp;|&nbsp; <i class="far fa-pen-to-square me-2"></i>Will Hyndman</div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 content-area">
+                
+                <p class="lead">Tailscale is a Zero Trust VPN service. what this means is you don’t rely on a provider, and it’s typically used to access private networks you are working on or own. A common reason someone would use Tailscale is for Remote Desktop. Normally you would open ports on your router to make your computer accessible from anywhere, which can be dangerous. However, with a zero trust VPN you create a secure tunnel between you and your resource keeping your networks secure.</p>
+                <p class="lead">Tailscale can be used on lots of different operating systems Including Windows, Linux, IOS, Android and more.  Unlike a lot of other VPNs Tailscale is different because it has a peer-to-peer mesh system. A mesh system allows your devices to directly connect to each other instead of routing traffic threw one big server. This gives you better speeds and stands out in the zero-trust networking and the VPN fields.</p>
+                
+                <div class="alert alert-info border-0 bg-dark text-info">
+                    <i class="fas fa-info-circle me-2"></i> <strong>Requirements to Run:</strong> To run Tailscale you will need 2 different devices that are either running Android IOS MacOS Linux or Windows (The devices do not need to be the same OS) an internet connection for instal and running the connection. And lastly admin privileges on your system for setup and operation. (This mostly applies to MacOS or Windows)  
+                </div>
+                
+                <hr class="my-4 border-secondary">
+
+                <h1>The Setup</h1>
+
+                <h2>Step 1</h2>
+                <p class="lead">Open your web browser of choice whether it be Google Chrome, Safari or Opera and go to <a href="https://tailscale.com" target="_blank" rel="noopener noreferrer">https://tailscale.com/</a></p>
+
+                <h2>Step 2</h2>
+                <p class="lead">Then when the page loads click the download button at the top right of the page (As shown here)</p>
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/guide_to_download_tailscale.png" alt="Tailscale download page with download button circled in red in the top right corner" width="600" height="320">
+
+                <h2>Step 3</h2>
+                <p class="lead">Once clicking download you then need to pick your operating system of choice MacOS, Ios, Windows, Linux or Android.</p>
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/download_tailscale.png" alt="Tailscale’s pick your iso download page with the windows version selected" width="600" height="320">
+
+                <p> </p>
+
+                <div class="alert alert-info border-0 bg-dark text-info">
+                    <i class="fas fa-info-circle me-2"></i> <strong>Note:</strong> (You will need at least 2 devices with Tailscale installed)  
+                </div>
+
+                <h2>Step 4</h2>
+                <p class="lead">Once you have Selected your operating system the download will begin. Wait for the download to finish then run the Exe. </p>
+                <p class="lead">After running the Exe, you will get a prompt that pops up asking for admin privileges click accept. Then a pop up will show up with a link to read the terms of service read them check "I agree" and click install.</p>
+
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/tailscale_install_screen.png" alt="Tailscale’s Terms of Service pop up prompt with red circle around the install button in the bottom right" width="400" height="300">
+                
+                <h2>Step 5</h2>
+                <p class="lead">Next join your network from the device you can do this by clicking sign into your network (if you already have an account) or sign up (if you don't already have a Tailscale account and need to make one luckily making a Tailscale account is easy you can just create it with a partner sign in like your google account). Once you sign in on both devices you should see a page that shows your connection between both devices and the IP address</p>
+                
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/tailscale_join_network.png" alt="Talescale's Join Splash Screen" width="400" height="300">
+                
+                <p> </p>
+
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/connection_test_and_success_tailscale.png" alt="Tailscale’s successful install page that also shows your 2 connected devices and their IP’s" width="600" height="320">
+
+                <h2>Step 6</h2>
+                <p class="lead">Next you will get one last prompt that says set up complete and you will have an option to close the window if you see this prompt, you have successfully completed the install steps for Tailscale from here you can take a deeper look at the settings and options available to you from inside the admin dashboard </p>
+                
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/tailscale_install_success.png" alt="Tailscale’s installation successfully completed pop up with close button" width="400" height="300">
+                
+                <h2>Finished</h2>
+                <p class="lead">You can launch Tailscale and configure different settings that were going to talk about in the next section.</p>
+                <h4>Further Settings:</h4>
+                <p class="lead">In Tailscale you get assigned a 100.x.y.z IP, so instead of using your networks IP, you are using the mesh systems IP range.</p>
+                <p class="lead">From the Tailscale app in your systems task bar you can configure different preferences for how you want the app to behave. Allowing Incoming connections will allow other devices or people you invited to use that computer/resource. The DNS settings use the DNS you set up in the Tailscale app. One of the big benefits of Tailscale is MagicDNS which allows you to connect to devices by name. You can also enforce nameservers to use as well. The Next one is Tailscale Subnets this allows this computer you are using to access subnet routes attached to other devices. For example, if you have a raspberry pi exposing your home printer or lan to Tailscale you can see it on the computer but if it's not checked you cannot see it on the computer. Auto updates a great thing to have you don’t need to worry about having to see when it updates it just does its great simple and good to have. Run unattended my favourite one it configures Tailscale to be used as a System Service rather than an application. The difference is when checked Tailscale connects when the computer boots up even without a user sign in when unchecked if you sign out Tailscale becomes unavailable. The Last option is the reset to default if you mess something up or want to reconfigure the settings above it sets it to factory settings </p>
+
+                <img src="/images/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/tailscale_settings_pane.png" alt="Tailscale Settings Pannel in System Tray Options" width="240" height="140">
+
+                <h2>Conclusion</h2>
+                <p class="lead">In conclusion Tailscale offers users a way to have flexible and secure access to their lab networks from anywhere without having to expose them to unwanted risk it removes the need for a vpn and many open ports while still being easy to use and secure for less tech savvy users while also supporting multiple operating systems being packed with great features like magic DNS subnet routing and unattended mode it makes for a great easy to use tool for users trying to connect remotely to their private networks.</p>
+                
+                <h4>Citations</h4>
+                <p class="lead">Tailscale: <a href="https://tailscale.com/kb" target="_blank" rel="noopener noreferrer">https://tailscale.com/kb</a></p>
+                </div>
+        </div>
+    </div>
+
+    <div class="py-4 border-top border-secondary text-center bg-black">
+        <p class="mb-0 text-muted small">&copy; 2026 DRTC.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing Windows in 2026: Why the Clean Install is Still King | The DamVan Blog</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --blog-bg: #0d0d0f; --blog-surface: #161619; --blog-border: #2a2a2e; --blog-accent: #3b82f6; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--blog-bg); color: #e0e0e0; font-family: 'DM Sans', sans-serif; }
+        .hero-small { background: linear-gradient(135deg, #1a1a1a, #2c3e50); padding: 48px 0; border-bottom: 1px solid var(--blog-border); }
+        .content-area { font-size: 1.1rem; line-height: 1.85; }
+        .content-area h1, .content-area h2 { margin-top: 2rem; color: #fff; font-weight: 700; }
+        .content-area h3, .content-area h4 { margin-top: 1.5rem; color: #ccc; }
+        .content-area p { margin-bottom: 1rem; }
+        .content-area img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--blog-border); margin: 1rem 0; }
+        .content-area a { color: var(--blog-accent); }
+        .content-area a:focus-visible { outline: 2px solid var(--blog-accent); outline-offset: 2px; }
+        .content-area code { color: #e879f9; background: rgba(0,0,0,0.3); padding: 0.2em 0.4em; border-radius: 4px; font-size: 0.9em; }
+        .content-area pre { background: var(--blog-surface); padding: 1.25rem; border: 1px solid var(--blog-border); border-radius: 8px; overflow-x: auto; }
+        .content-area pre code { background: none; padding: 0; color: #e0e0e0; }
+        .breadcrumb-item a { text-decoration: none; color: var(--blog-accent); }
+        .breadcrumb-item a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/index.html"><i class="fas fa-comments me-2"></i><span class="text-primary">blog.</span>damvan<span class="text-primary">.ca</span></a>
+            <div class="ms-auto">
+                <a href="/index.html" class="btn btn-outline-secondary btn-sm">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-small" style="
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/post-bg-1.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+    ">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">Blog Post</li>
+                </ol>
+            </nav>
+            <h1 class="display-5 fw-bold text-white">Installing Windows in 2026: Why the Clean Install is Still King</h1>
+            <div class="text-muted">
+                <i class="far fa-calendar me-2"></i>February 27, 2026 &nbsp;|&nbsp; 
+                <i class="far fa-user me-2"></i>Will Hyndman<br>
+                <i class="far fa-pen-to-square me-2"></i>Dalton Goodwin-Peck
+                <i class="far fa-pen-to-square me-2"></i>Leland Jensen
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 content-area">
+                
+                <p class="lead">
+                    It's 2026, and the way we handle Windows has definitely changed. Windows 11 is practically an AI ecosystem at this point, and Windows 10 is firmly in its Extended Security Updates retirement phase. Microsoft has pushed hard to make upgrading as seamless as possible, but if you're a system builder, a gamer, or just someone who wants their PC to run right, the old-school rule still applies: nothing beats a clean install from a USB drive.
+                </p>
+
+                <hr class="my-4 border-secondary">
+
+                <h2>What’s Changed Since 2020?</h2>
+
+                <p>
+                    If you put together a PC back in 2020, installing Windows 10 was simple. You’d plug in your flash drive, click "I don't have internet" to skip the Microsoft account requirement, and you'd be looking at your desktop a few minutes later.
+                </p>
+
+                <p>
+                    Things are a bit more complicated now. Here's what we're dealing with today:
+                </p>
+
+                <h3>Hardware Lock-ins</h3>
+                <p>
+                    TPM 2.0 and Secure Boot aren't just suggestions anymore; they are hard requirements for Windows 11. Bypassing them takes extra work.
+                </p>
+
+                <h3>The Microsoft Account Wall</h3>
+                <p>
+                    Skipping the online account login during setup is basically impossible out of the box now. You need specific command-line tricks just to set up a standard local account.
+                </p>
+
+                <h3>Built-in Bloat</h3>
+                <p>
+                    We used to complain about Candy Crush showing up in the start menu. Now, we're managing baked-in Copilot features and heavy telemetry before the OS even finishes booting.
+                </p>
+
+                <div class="alert alert-info border-0 bg-dark text-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Note:</strong> If you're still running Windows 10 in 2026, you're either paying for ESU, keeping the machine strictly offline, or rolling the dice on security. For most modern setups, Windows 11 is really the only practical choice.
+                </div>
+
+                <h2>The Problem with "Update Now"</h2>
+
+                <p>
+                    Microsoft makes it incredibly easy to just use the Windows Installation Assistant. It’s a one-click button that promises to upgrade your system while keeping all your files, games, and settings exactly where you left them.
+                </p>
+
+                <p>
+                    It sounds great on paper, but in practice, it usually causes headaches.
+                </p>
+
+                <h3>1. Leftover Junk (Windows Rot)</h3>
+                <p>
+                    An in-place upgrade doesn't wipe the slate clean; it just builds the new OS on top of the old one. Every registry error, every left-behind file from uninstalled software, and all those weird background quirks carry right over. Over time, this leads to sluggish performance and longer boot times.
+                </p>
+
+                <h3>2. Driver Conflicts</h3>
+                <p>
+                    This is the big one. Upgrading an older Windows install often drags legacy drivers into a new kernel environment. A lot of the random blue screens (BSODs), audio popping, or weird frame rate drops we see today happen because a three-year-old network or chipset driver survived the upgrade and is now fighting with Windows 11.
+                </p>
+
+                <h2>Why the USB Clean Install is Better</h2>
+
+                <p><strong>Peak Performance:</strong> You get a completely blank slate. No conflicting background services, no messy registry, just the base OS and the drivers you actually want.</p>
+
+                <p><strong>Storage Recovery:</strong> You'd be surprised how much space gets eaten up by hidden temporary files and the massive Windows.old folder. A quick format reclaims all of it.</p>
+
+                <p><strong>Taking Control:</strong> Using the USB method, especially with third-party tools, lets you decide exactly how Windows behaves, stripping out telemetry and forced logins before the install even starts.</p>
+
+                <h2>How to Do it Right in 2026</h2>
+
+                <h3>Step 1: Get the Raw ISO</h3>
+                <p>
+                    Head to Microsoft’s Software Download page, but skip the Installation Assistant. Scroll down and download the raw Windows 11 Disk Image (ISO). This gets you the actual image file without any of Microsoft's automated fluff.
+                </p>
+
+                <h3>Step 2: Use Rufus</h3>
+                <p>
+                    Rufus is an essential, free tool for writing ISO files to a USB drive. The reason we use it in 2026 is because of the custom prompts it gives you before writing to the drive. It allows you to automatically remove the Microsoft account requirement so you can use a local account, bypass TPM or RAM checks if you're keeping older hardware alive, and disable the privacy-invasive telemetry questions during setup.
+                </p>
+
+                <h3>Step 3: Wipe the Drive</h3>
+                <p>
+                    Boot from the USB drive. When you reach the Windows Setup screen, select "Custom: Install Windows only (advanced)". You'll see a list of partitions. Delete every single one associated with your old OS until you are left with a single block of "Unallocated Space". Select that, and hit next.
+                </p>
+
+                <p>
+                    And yes, make sure your important files are backed up on a separate drive before doing this.
+                </p>
+
+                <h3>Step 4: A Clean Desktop</h3>
+                <p>
+                    Because you pre-configured the install with Rufus, you'll breeze right past the annoying login walls and drop straight into a clean, local desktop. Run Windows Update, grab your GPU drivers directly from AMD or NVIDIA, and you’re done.
+                </p>
+
+                <h2>Final Thoughts</h2>
+
+                <p>
+                    It’s always tempting to take the path of least resistance when Windows prompts you to update. But spending an hour on a Saturday to back up your data, flash a USB, and do a proper wipe is the best troubleshooting step you can take. It guarantees your hardware is actually running at its full potential, without the baggage of your old install.
+                </p>
+
+                <p>
+                    Don't just upgrade your OS. Wipe it and start fresh.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="py-4 border-top border-secondary text-center bg-black">
+        <p class="mb-0 text-muted small">&copy; 2026 DRTC</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The DamVan Blog | IT & SysAdmin Journal</title>
+    <meta name="description" content="Documenting our journey through IT, Networking, and Help Desk solutions. Powered by DRTC.net.">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --blog-bg: #0d0d0f;
+            --blog-surface: #161619;
+            --blog-border: #2a2a2e;
+            --blog-accent: #3b82f6;
+            --blog-accent-hover: #60a5fa;
+        }
+        body {
+            background-color: var(--blog-bg);
+            color: #e0e0e0;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), url('/images/14m7h0m3p263w251Mp0r12nt/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-bottom: 1px solid var(--blog-border);
+            padding: 100px 0;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .card {
+            background-color: var(--blog-surface);
+            border: 1px solid var(--blog-border);
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+            border-color: var(--blog-accent);
+        }
+        .category-badge {
+            background-color: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            color: var(--blog-accent-hover);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 5px 12px;
+            border-radius: 6px;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fas fa-comments me-2"></i>
+            <span class="text-primary">blog.</span>damvan<span class="text-primary">.ca</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Latest Posts</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://drtc.net/">DRTC.net</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://damvan.ca/">Damvan.ca</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3 text-white">The DamVan Blog</h1>
+        <p class="lead mb-4 text-secondary">
+            Documenting our journey through IT, Networking, and Help Desk solutions.<br>
+            Powered by DRTC.net
+        </p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-dark border-secondary text-secondary">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    <input type="text" id="searchInput" class="form-control bg-dark border-secondary text-white" placeholder="Search topics (e.g. VPN, PowerShell, IIS)...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+
+<!-- Sidebar -->
+<div class="col-lg-3 mb-5 order-lg-last">
+    <div class="sticky-top" style="top: 20px;">
+        <h6 class="text-uppercase text-muted fw-bold mb-3">Filter by Topic</h6>
+        <div class="list-group mb-4">
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary filter-link active" data-filter="all">All Posts</a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-light border-secondary filter-link" data-filter="Networking">Networking</a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-light border-secondary filter-link" data-filter="Blockchain">Blockchain</a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-light border-secondary filter-link" data-filter="Windows">Windows</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="col-lg-9">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="text-white m-0">Recent Entries</h4>
+    <span class="badge bg-secondary" id="postCount">4 posts</span>
+</div>
+
+<div class="row g-4" id="blogGrid">
+
+<!-- Post 1 -->
+<div class="col-md-6 blog-item" data-category="Networking">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+                <span class="category-badge">Networking</span>
+                <small class="text-muted">2026-01-20</small>
+            </div>
+            <h5 class="card-title fw-bold text-white">
+                <a href="posts/v1rtua1961vat3n3tw06k5/t21l5C213i5C001/How_2_install_Tailscale.html" class="text-decoration-none text-white stretched-link">
+                    How to Install Tailscale
+                </a>
+            </h5>
+            <p class="card-text text-secondary small">
+                How to set up a Personal and Private VPN back to your Home Network.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Post 2 -->
+<div class="col-md-6 blog-item" data-category="Blockchain">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+                <span class="category-badge">Blockchain</span>
+                <small class="text-muted">2026-01-21</small>
+            </div>
+            <h5 class="card-title fw-bold text-white">
+                <a href="/posts/b10c4ch21n5/0asr9345bvk-wr324asre/Are_Blockchains_Still_Relevant.html" class="text-decoration-none text-white stretched-link">
+                    Are Blockchains still relevant?
+                </a>
+            </h5>
+            <p class="card-text text-secondary small">
+                Exploring whether Blockchain remains relevant in 2026.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Post 3 -->
+<div class="col-md-6 blog-item" data-category="Windows">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+                <span class="category-badge">Windows</span>
+                <small class="text-muted">2026-02-19</small>
+            </div>
+            <h5 class="card-title fw-bold text-white">
+                <a href="posts/w1n60w554n680x/w44t151tg00d4/Windows_Sandbox.html" class="text-decoration-none text-white stretched-link">
+                    Unlock the Power of Isolation: Your Guide to Windows Sandbox
+                </a>
+            </h5>
+            <p class="card-text text-secondary small">
+                Run applications safely in an isolated Windows Sandbox environment.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Post 4 -->
+<div class="col-md-6 blog-item" data-category="Windows">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="d-flex justify-content-between mb-3">
+                <span class="category-badge">Windows</span>
+                <small class="text-muted">2026-02-27</small>
+            </div>
+            <h5 class="card-title fw-bold text-white">
+                <a href="posts/wkqgnaoatgnelkskf/instaling_windows_2026.html" class="text-decoration-none text-white stretched-link">
+                    Installing Windows in 2026: Why the Clean Install is Still King
+                </a>
+            </h5>
+            <p class="card-text text-secondary small">
+                Why a USB clean install still beats in-place upgrades.
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="py-4 mt-5 border-top border-secondary text-center">
+    <p class="mb-0 text-muted">&copy; 2026 DRTC. Built with Bootstrap 5 & IIS.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
